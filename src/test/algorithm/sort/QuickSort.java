@@ -23,7 +23,7 @@ class QuickSort {
         T pivot = unsorted[low]; // pivot
         while (true) {
             // swap unsorted[left] and unsorted[right] when spotted unsorted[left]>pivot and unsorted[right]<pivot
-            while (left <= high && unsorted[left].compareTo(pivot) < 0) {
+            while (left <= high && unsorted[left].compareTo(pivot) <= 0) {
                 left++;
             }
             while (right > low && unsorted[right].compareTo(pivot) > 0) {
