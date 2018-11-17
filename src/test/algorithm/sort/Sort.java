@@ -27,5 +27,6 @@ public class Sort {
         System.out.println("unsorted array = " + Arrays.toString(array));
         testSort("Bubble sort", BubbleSort::sort, array);
         testSort("Quick sort", QuickSort::sort, array);
+        testSort("Merge sort", MergeSort::sort, array);
     }
 }
