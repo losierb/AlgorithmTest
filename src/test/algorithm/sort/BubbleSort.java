@@ -1,6 +1,6 @@
 package test.algorithm.sort;
 
-public class BubbleSort extends Sort {
+class BubbleSort {
     static <T extends Comparable<T>> T[] sort(T[] unsorted) {
         T[] result = unsorted.clone();
         for (int i = 0; i < result.length; i++) {
