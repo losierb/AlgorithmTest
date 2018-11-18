@@ -4,8 +4,8 @@ class MergeSort {
     static <T extends Comparable<T>> T[] sort(T[] unsorted) {
         // Merge sort requires
         T[] result = unsorted.clone();
-        merge(unsorted, result, 0, result.length);
-        return result;
+        merge(result, unsorted, 0, result.length);
+        return unsorted;
     }
 
     /**

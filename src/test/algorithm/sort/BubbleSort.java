@@ -2,7 +2,7 @@ package test.algorithm.sort;
 
 class BubbleSort {
     static <T extends Comparable<T>> T[] sort(T[] unsorted) {
-        T[] result = unsorted.clone();
+        T[] result = unsorted;
         for (int i = 0; i < result.length; i++) {
             boolean swapped = false;
             for (int j = 0; j < result.length - 1 - i; j++) {

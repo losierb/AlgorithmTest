@@ -18,14 +18,14 @@ public class Sort {
         Integer[] actual_result = array.clone();
         Arrays.sort(actual_result);
         long start = System.nanoTime();
-        Integer[] result = function.apply(array);
+        Integer[] result = function.apply(array.clone());
         long duration = System.nanoTime() - start;
         System.out.println(label + " test result: " + Arrays.equals(result, actual_result) + ", duration: " + duration + "ns");
     }
 
     public static void main(String[] args) {
         Random rand = new Random();
-        Integer[] array = new Integer[3300];
+        Integer[] array = new Integer[100];
         for (int i = 0; i < array.length; i++) {
             array[i] = rand.nextInt(1000);
         }
@@ -33,5 +33,6 @@ public class Sort {
         testSort("Bubble sort", BubbleSort::sort, array);
         testSort("Quick sort", QuickSort::sort, array);
         testSort("Merge sort", MergeSort::sort, array);
+        testSort("Insertion sort", InsertionSort::sort, array);
     }
 }

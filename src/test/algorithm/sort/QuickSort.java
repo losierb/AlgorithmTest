@@ -2,7 +2,7 @@ package test.algorithm.sort;
 
 class QuickSort {
     static <T extends Comparable<T>> T[] sort(T[] unsorted) {
-        T[] result = unsorted.clone();
+        T[] result = unsorted;
         sortPartition(result, 0, result.length - 1);
         return result;
     }
