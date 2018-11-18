@@ -25,11 +25,15 @@ public class Sort {
 
     public static void main(String[] args) {
         Random rand = new Random();
-        Integer[] array = new Integer[100];
+        Integer[] array = new Integer[500];
         for (int i = 0; i < array.length; i++) {
             array[i] = rand.nextInt(1000);
         }
         System.out.println("unsorted array = " + Arrays.toString(array));
+        testSort("Java builtin sort", (Integer[] arr) -> {
+            Arrays.sort(arr);
+            return arr;
+        }, array);
         testSort("Bubble sort", BubbleSort::sort, array);
         testSort("Quick sort", QuickSort::sort, array);
         testSort("Merge sort", MergeSort::sort, array);
