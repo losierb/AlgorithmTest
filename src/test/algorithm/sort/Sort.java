@@ -34,5 +34,6 @@ public class Sort {
         testSort("Quick sort", QuickSort::sort, array);
         testSort("Merge sort", MergeSort::sort, array);
         testSort("Insertion sort", InsertionSort::sort, array);
+        testSort("Shell sort", ShellSort::sort, array);
     }
 }
