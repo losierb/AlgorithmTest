@@ -25,7 +25,7 @@ public class Sort {
 
     public static void main(String[] args) {
         Random rand = new Random();
-        Integer[] array = new Integer[500];
+        Integer[] array = new Integer[200];
         for (int i = 0; i < array.length; i++) {
             array[i] = rand.nextInt(1000);
         }
@@ -39,5 +39,6 @@ public class Sort {
         testSort("Merge sort", MergeSort::sort, array);
         testSort("Insertion sort", InsertionSort::sort, array);
         testSort("Shell sort", ShellSort::sort, array);
+        testSort("Heap sort", HeapSort::sort, array);
     }
 }
