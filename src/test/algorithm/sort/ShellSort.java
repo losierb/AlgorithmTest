@@ -8,17 +8,20 @@ public class ShellSort {
             gap = 3*gap+1; // 1, 4, 13, 40, 121, ...
         }
         while (gap >= 1) {
-            for (int i = gap; i < len; i++) { // sort each sublist (insertion sort approach)
-                T cur = unsorted[i];
-                int j = i-gap;
-                while (j >= 0 && unsorted[j].compareTo(cur) > 0) { // sort a sublist
-                    unsorted[j+gap] = unsorted[j];
-                    j = j-gap;
-                }
-                unsorted[j+gap] = cur;
-            }
+            sortInGap(unsorted, gap);
             gap = (gap-1)/3; // tightening the gap
         }
         return unsorted;
+    }
+    private static <T extends Comparable<T>> void sortInGap(T[] unsorted, int gap) {
+        for (int i = gap; i < unsorted.length; i++) { // sort each sublist (insertion sort approach)
+            T cur = unsorted[i];
+            int j = i-gap;
+            while (j >= 0 && unsorted[j].compareTo(cur) > 0) { // sort a sublist
+                unsorted[j+gap] = unsorted[j];
+                j = j-gap;
+            }
+            unsorted[j+gap] = cur;
+        }
     }
 }
