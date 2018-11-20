@@ -12,3 +12,5 @@ Sorting:
  * [Insertion sort](src/test/algorithm/sort/InsertionSort.java)
  * [Bubble sort](src/test/algorithm/sort/BubbleSort.java)
   
+Tree structures:
+ * [Radix tree](src/test/algorithm/tree/Radix.java) (haven't finished the delete part)
